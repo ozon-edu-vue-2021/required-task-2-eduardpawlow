@@ -1,0 +1,82 @@
+.dir-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.dir-item__title {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dir-item__arrow {
+  margin-left: 10px;
+}
+
+.dir-item__arrow.active {
+  transform: rotate(180deg);
+}
+
+.dir-item__content {
+  position: relative;
+  padding-left: 30px;
+}
+
+.dir-item__content::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  bottom: 0px;
+  display: block;
+  width: 2px;
+  background: black;
+}
+
+.dir-item::before,
+.dir-item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: black;
+}
+
+.dir-item::before {
+  top: 13px;
+  left: -15px;
+  height: 2px;
+  width: 15px;
+}
+
+.dir-item::after {
+  top: -15px;
+  left: -15px;
+  height: 30px;
+  width: 2px;
+}
+
+.dir-item.dir-item--selected {
+  background-color: lightcyan;
+}
+
+.dir-item:first-child::after {
+  top: 0;
+  height: 15px;
+}
+
+.dir-item.dir-item--link .dir-item__title {
+  text-decoration: underline;
+  color: blue;
+}
+
+.dir-item.dir-item--file {
+}
+
+.dir-item.dir-item--link:hover,
+.dir-item.dir-item--file:hover {
+  background-color: lightcyan;
+}
