@@ -1,7 +1,8 @@
 <template>
   <div class="dir-item">
     <div class="dir-item__title" @click="toggleOpen">
-      <span>{{ name }} </span>
+      <IconPng :name="isOpen ? 'folder-opened' : 'folder'" />
+      <span>{{ name }}</span>
       <ArrowIcon :class="['dir-item__arrow', { active: isOpen }]" />
     </div>
     <div class="dir-item__content" v-if="isOpen">
@@ -22,6 +23,7 @@ import DirectoryFile from "./File";
 import DirectoryLink from "./Link";
 import Directory from "../Directory";
 import ArrowIcon from "../Icons/Arrow.vue";
+import IconPng from "../Icons/IconPng.vue";
 
 export default {
   name: "directory",
@@ -30,6 +32,7 @@ export default {
     DirectoryLink,
     Directory,
     ArrowIcon,
+    IconPng,
   },
   props: {
     name: { type: String, default: "UNKNOWN" },

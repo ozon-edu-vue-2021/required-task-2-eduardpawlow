@@ -1,4 +1,9 @@
+import IconPng from "../components/Icons/IconPng.vue";
+
 export default {
+  components: {
+    IconPng,
+  },
   props: {
     name: {
       type: String,

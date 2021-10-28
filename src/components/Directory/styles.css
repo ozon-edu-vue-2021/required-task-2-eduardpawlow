@@ -13,6 +13,11 @@
   user-select: none;
 }
 
+.dir-item__title .icon-png {
+  width: 16px;
+  margin-right: 10px;
+}
+
 .dir-item__arrow {
   margin-left: 10px;
 }

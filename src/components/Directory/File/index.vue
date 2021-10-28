@@ -4,7 +4,10 @@
     :class="{ 'dir-item--selected': isSelected }"
     @click="onClick"
   >
-    <div class="dir-item__title">{{ name }}</div>
+    <div class="dir-item__title">
+      <IconPng name="file" />
+      <span>{{ name }}</span>
+    </div>
   </div>
 </template>
 
